@@ -16,6 +16,7 @@ namespace Einkaufsliste
             do
             {
                 char userSelection = Console.ReadKey().KeyChar; // Eingabe des Benutzers
+                Console.WriteLine();
 
                 switch (userSelection)
                 {
@@ -36,7 +37,7 @@ namespace Einkaufsliste
 
                     default:                                    // Ungültige Angabe
                         Console.ForegroundColor = ConsoleColor.DarkRed;
-                        Console.WriteLine("Deine EInkabe ist ungültig, bitte wähle zwischen den oben genannten Möglichkeiten.");
+                        Console.WriteLine("Deine Eingabe ist ungültig, bitte wähle zwischen den oben genannten Möglichkeiten.");
                         Console.ResetColor();
                         validUserSelection = false;
                         break;
@@ -49,6 +50,10 @@ namespace Einkaufsliste
             string item = Console.ReadLine();
             Console.WriteLine($"Zur Liste hinzugefügt wird: {item} \n");
             */
+
+            Console.ReadKey();
+            Console.Clear();
+            Main();
         }
 
         public enum Shoppinglist
@@ -73,9 +78,23 @@ namespace Einkaufsliste
             Console.WriteLine("Nach welchem Item möchtest du suchen?");
             string search = Console.ReadLine();
 
+            string itemOnList = "";
 
-            Shoppinglist searchItem = (Shoppinglist)System.Enum.Parse(typeof(Shoppinglist), search);
-            Console.WriteLine($"{searchItem} befindet sich auf deiner Einkaufsliste.");
+            for (int i = 0; i < 10; i++)
+            {
+                itemOnList = Enum.GetName(typeof(Shoppinglist), i);
+
+                if (itemOnList == search)   // Item ist auf der Liste
+                {
+                    Console.WriteLine($"{search} befindet sich auf deiner Einkaufsliste.");
+                    break;
+                }
+            }
+
+            if (itemOnList != search)
+            {
+                Console.WriteLine($"{search} ist nicht auf deiner Einkaufsliste.");
+            }
 
         }
 
@@ -87,7 +106,6 @@ namespace Einkaufsliste
         // Ausgabe des Warenkorbs
         static void PrintList()
         {
-
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine((Shoppinglist)i);
