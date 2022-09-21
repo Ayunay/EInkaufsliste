@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mjabs\\OneDrive\\Dokumente\\MyGames\\Einkaufsliste\\Einkaufsliste\\Einkaufsliste.csproj": {}
+    "C:\\Users\\mjabs\\OneDrive\\Dokumente\\GitHub\\EInkaufsliste\\Einkaufsliste\\Einkaufsliste.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mjabs\\OneDrive\\Dokumente\\MyGames\\Einkaufsliste\\Einkaufsliste\\Einkaufsliste.csproj": {
+    "C:\\Users\\mjabs\\OneDrive\\Dokumente\\GitHub\\EInkaufsliste\\Einkaufsliste\\Einkaufsliste.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mjabs\\OneDrive\\Dokumente\\MyGames\\Einkaufsliste\\Einkaufsliste\\Einkaufsliste.csproj",
+        "projectUniqueName": "C:\\Users\\mjabs\\OneDrive\\Dokumente\\GitHub\\EInkaufsliste\\Einkaufsliste\\Einkaufsliste.csproj",
         "projectName": "Einkaufsliste",
-        "projectPath": "C:\\Users\\mjabs\\OneDrive\\Dokumente\\MyGames\\Einkaufsliste\\Einkaufsliste\\Einkaufsliste.csproj",
+        "projectPath": "C:\\Users\\mjabs\\OneDrive\\Dokumente\\GitHub\\EInkaufsliste\\Einkaufsliste\\Einkaufsliste.csproj",
         "packagesPath": "C:\\Users\\mjabs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mjabs\\OneDrive\\Dokumente\\MyGames\\Einkaufsliste\\Einkaufsliste\\obj\\",
+        "outputPath": "C:\\Users\\mjabs\\OneDrive\\Dokumente\\GitHub\\EInkaufsliste\\Einkaufsliste\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mjabs\\AppData\\Roaming\\NuGet\\NuGet.Config",
