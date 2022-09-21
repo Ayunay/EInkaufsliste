@@ -1,4 +1,5 @@
 ﻿using System.Reflection.Metadata.Ecma335;
+using System.Xml.Serialization;
 
 namespace Einkaufsliste
 {
@@ -11,7 +12,8 @@ namespace Einkaufsliste
             Console.WriteLine("Was möchtest du tun?\n" +
                                   "1. Item zur Einkaufsliste hinzufügen \n" +
                                   "2. Nach einem Item auf der Einkaufsliste suchen \n" +
-                                  "3. Meine Einkaufsliste ausgeben lassen");
+                                  "3. Meine Einkaufsliste ausgeben lassen \n" +
+                                  "4. Lass den Gesamtpreis des Einkaufes ausgeben");
 
             do
             {
@@ -32,6 +34,11 @@ namespace Einkaufsliste
 
                     case '3':                                   // Auswahl: 3
                         PrintList();
+                        validUserSelection = true;
+                        break;
+
+                    case '4':                                   // Auswahl: 4
+                        TotalPrice();
                         validUserSelection = true;
                         break;
 
@@ -68,7 +75,6 @@ namespace Einkaufsliste
             Joghurt,
             Salat,
             Tomaten,
-
         }
 
         // Suche nach einem Item auf der Liste
@@ -100,7 +106,7 @@ namespace Einkaufsliste
 
         static void AddItem()
         {
-
+            // Shoppinglist.Add("Wasser");
         }
 
         // Ausgabe des Warenkorbs
@@ -112,18 +118,26 @@ namespace Einkaufsliste
             }
         }
 
-        /*
-        public Shoppinglist GetItems(string item)
+        // Der Gesamtpreis des Einkaufs wird ausgegeben
+        static void TotalPrice()
         {
-            string[] items = Enum.GetNames(typeof(Shoppinglist));
-            int[] values   = Enum.GetValues(typeof(Shoppinglist));
-            int i;
-            for (i = 0; i < items.Length; i++)
+            Random random = new Random();
+            double[] prices = new double[10];
+            double gesPrice = 0;
+
+            for (int i = 0; i < 10; i++)
             {
-                if (item.Equals(items[i], StringComparison.Ordinal)) break;
+                double singlePrice = random.NextDouble();   // DOuble nur zwischen 0.0 und 1.0
+                //round(singlePrice, 2);
+
+                prices[i] = singlePrice;
+                Console.WriteLine(prices[i]);
+
+                gesPrice += singlePrice;
             }
-            int value = values[i];
-            return ;
-        }*/
+
+            Console.WriteLine($"Der Gesamtpreis beträgt {gesPrice}");
+        }
+
     }
 }
